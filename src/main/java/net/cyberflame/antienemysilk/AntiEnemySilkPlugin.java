@@ -6,6 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import net.cyberflame.antienemysilk.listeners.SpawnerBreakListener;
 
 
+
 public class AntiEnemySilkPlugin extends JavaPlugin
 {
 	@Override

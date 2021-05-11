@@ -15,14 +15,12 @@ import de.dustplanet.silkspawners.events.SilkSpawnersSpawnerBreakEvent;
 public class SpawnerBreakListener implements Listener
 {
 	@EventHandler
-	public void onSpawnerBreak(final SilkSpawnersSpawnerBreakEvent e) 
+	public void onSpawnerBreak(SilkSpawnersSpawnerBreakEvent e)
 	{
-		Faction faction = null;
 		Player p = e.getPlayer();
 		FPlayer fp = FPlayers.getInstance().getByPlayer(p);
-		FLocation fLoc = new FLocation(p.getLocation());
-		faction = Board.getInstance().getFactionAt(fLoc);
 		fp.checkIfNearbyEnemies();
+		p.sendMessage(p.getName() + fp.getName() + fp + p + fp.isInOwnTerritory() + fp.hasEnemiesNearby());
 		if (fp.isInOwnTerritory() && fp.hasEnemiesNearby())
 			e.setCancelled(true);
 	}

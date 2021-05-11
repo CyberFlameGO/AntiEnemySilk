@@ -1,0 +1,4 @@
+name: AntiEnemySilk
+main: net.cyberflame.antienemysilk.AntiEnemySilkPlugin
+depend: [SilkSpawners, Factions]
+version: 1.0
