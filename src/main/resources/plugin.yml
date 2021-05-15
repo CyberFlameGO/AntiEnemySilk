@@ -2,3 +2,7 @@ name: ${project.name}
 main: net.cyberflame.antienemysilk.AntiEnemySilkPlugin
 depend: [Factions]
 version: ${project.version}
+permissions:
+  aes.bypassnearbyenemycheck:
+   description: Bypasses spawner enemy check
+   default: op
