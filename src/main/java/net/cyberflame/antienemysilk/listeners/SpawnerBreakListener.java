@@ -12,6 +12,8 @@ import com.massivecraft.factions.FPlayer;
 import com.massivecraft.factions.FPlayers;
 import com.massivecraft.factions.struct.Relation;
 
+import net.md_5.bungee.api.ChatColor;
+
 
 public class SpawnerBreakListener implements Listener
 {
@@ -40,9 +42,8 @@ public class SpawnerBreakListener implements Listener
 	            	enemiesNearby = true;
 	    		if (fp.isInOwnTerritory() & b.getType() == Material.MOB_SPAWNER && enemiesNearby == true)
 	    			e.setCancelled(true);
-				p.sendMessage(ChatColor.RED + "You cannot break spawners while an enemy is near.");
+	    			p.sendMessage(ChatColor.RED + "You cannot break spawners while an enemy is near!");
 	        }
 	    }
 	}
 }
-
