@@ -40,6 +40,7 @@ public class SpawnerBreakListener implements Listener
 	            	enemiesNearby = true;
 	    		if (fp.isInOwnTerritory() & b.getType() == Material.MOB_SPAWNER && enemiesNearby == true)
 	    			e.setCancelled(true);
+				p.sendMessage(ChatColor.RED + "You cannot break spawners while an enemy is near.");
 	        }
 	    }
 	}
