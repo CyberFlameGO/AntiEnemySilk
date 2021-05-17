@@ -18,6 +18,7 @@ import net.md_5.bungee.api.ChatColor;
 public class SpawnerBreakListener implements Listener
 {
 	public boolean enemiesNearby = false;
+	int radius = 32;
 	@EventHandler
 	public void onSpawnerBreak(BlockBreakEvent e) 
 	{
@@ -27,7 +28,6 @@ public class SpawnerBreakListener implements Listener
 		
 		if (p == null) return;
 	    if (p.hasPermission("aes.bypassnearbyenemycheck")) return;
-	    int radius = 50;
 	    for (Entity ent : p.getNearbyEntities(radius, 255, radius)) 
 	    {
 	        if (ent instanceof Player) 
