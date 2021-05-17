@@ -30,7 +30,7 @@ public class SpawnerBreakListener implements Listener
 	    {
 	        if (ent instanceof Player) 
 	        {
-	            Player eplayer = (((Player) e).getPlayer());
+	            Player eplayer = (((Player) ent).getPlayer());
 	            if (eplayer == null) continue;
 	            if (eplayer.hasMetadata("NPC")) continue;
 	            FPlayer efplayer = FPlayers.getInstance().getByPlayer(eplayer);
