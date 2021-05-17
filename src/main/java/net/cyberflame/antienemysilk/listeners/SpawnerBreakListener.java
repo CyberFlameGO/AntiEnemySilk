@@ -40,9 +40,11 @@ public class SpawnerBreakListener implements Listener
 	            if (!p.canSee(eplayer) || efplayer.isVanished()) continue;
 	            if (fp.getRelationTo(efplayer).equals(Relation.ENEMY) && !efplayer.isStealthEnabled()) 
 	            	enemiesNearby = true;
-	    		if (fp.isInOwnTerritory() & b.getType() == Material.MOB_SPAWNER && enemiesNearby == true)
+	    		if (fp.isInOwnTerritory() && b.getType() == Material.MOB_SPAWNER && enemiesNearby)
+	    		{
 	    			e.setCancelled(true);
 	    			p.sendMessage(ChatColor.RED + "You cannot break spawners while an enemy is near!");
+	    		}
 	        }
 	    }
 	}
