@@ -18,7 +18,7 @@ import net.md_5.bungee.api.ChatColor;
 public class SpawnerBreakListener implements Listener
 {
 	public boolean enemiesNearby = false;
-	int radius = 32;
+	public int radius = 32;
 	@EventHandler
 	public void onSpawnerBreak(BlockBreakEvent e) 
 	{
