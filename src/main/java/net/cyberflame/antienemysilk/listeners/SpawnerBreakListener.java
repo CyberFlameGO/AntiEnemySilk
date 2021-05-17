@@ -26,9 +26,9 @@ public class SpawnerBreakListener implements Listener
 		if (p == null) return;
 	    if (p.hasPermission("aes.bypassnearbyenemycheck")) return;
 	    int radius = 50;
-	    for (@SuppressWarnings("unused") Entity ent : p.getNearbyEntities(radius, 255, radius)) 
+	    for (Entity ent : p.getNearbyEntities(radius, 255, radius)) 
 	    {
-	        if (e instanceof Player) 
+	        if (ent instanceof Player) 
 	        {
 	            Player eplayer = (((Player) e).getPlayer());
 	            if (eplayer == null) continue;
